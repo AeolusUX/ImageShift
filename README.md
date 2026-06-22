@@ -14,30 +14,38 @@ ImageShift automatically selects a random BMP image from `/boot/BMPs/` at every 
 
 ## Installation
 
-1. Download or clone this repository.
-2. Add your boot logos to:
+1. Download this repository and extract it.
+2. Copy the ImageShift folder to either:
+
+```text
+/roms/tools/
+/roms/ports/
+```
+
+3. Launch `Install.ImageShift.sh` from the Tools or Ports menu.
+
+The installer will:
+
+* Install `imageshift.sh` to `/home/ark/.config/`
+* Make the script executable
+* Configure the script to run automatically at boot
+* Remove the installer after installation
+* Reboot the device
+
+## Boot Logos
+
+Place your custom boot logos in:
 
 ```text
 /boot/BMPs/
 ```
 
-3. Run the installer:
-
-```bash
-chmod +x Install.ImageShift.sh
-./Install.ImageShift.sh
-```
-
-The installer will:
-
-* Install `imageshift.sh` to `/home/ark/.config/`
-* Configure the script to run automatically at boot
-* Reboot the device
+For best results, include at least two BMP images.
 
 ## Directory Structure
 
 ```text
-.
+ImageShift/
 ├── Install.ImageShift.sh
 └── imageshift.sh
 ```
